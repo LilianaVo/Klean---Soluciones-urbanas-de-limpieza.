@@ -1,10 +1,10 @@
-# 🌀 Klean | Soluciones Urbanas de Limpieza (Facility Services)
+# 🧼 Klean | Soluciones Urbanas de Limpieza (Facility Services)
 
-![Estado](https://img.shields.io/badge/Estado-Finalizado-success)
-![Semestre](https://img.shields.io/badge/Semestre-2026--1-blue)
-![Curso](https://img.shields.io/badge/Materia-Negocios_Electrónicos-orange)
+![UNAM](https://img.shields.io/badge/UNAM-Facultad_de_Ingeniería-gold)
+![Carrera](https://img.shields.io/badge/Ingeniería-Computación-blue)
+![Semestre](https://img.shields.io/badge/Semestre-2026--1-red)
 
-> **Proyecto Final de Desarrollo Web**
+> **Universidad Nacional Autónoma de México** > **Facultad de Ingeniería**
 
 ---
 
@@ -12,11 +12,13 @@
 
 | Campo | Detalle |
 | :--- | :--- |
-| **Materia** | NEGOCIOS ELECTRÓNICOS Y DESARROLLO WEB |
+| **Institución** | UNAM - Facultad de Ingeniería |
+| **Carrera** | Ingeniería en Computación |
+| **Asignatura** | Negocios Electrónicos y Desarrollo Web |
 | **Grupo** | 02 |
-| **Profesor** | Salvador Perez Viramontes |
-| **Fecha** | Noviembre 2025 |
-| **Semestre** | 2026-1 |
+| **Profesor** | M.I. Salvador Perez Viramontes |
+| **Fecha de Entrega** | Noviembre 2025 |
+| **Ciclo Escolar** | 2026-1 |
 
 ### 👥 Integrantes del Equipo (Eq3)
 * **Calzontzi Hernández Yaretzi**
@@ -27,74 +29,78 @@
 
 ## 💡 Concepto del Negocio: ¿Qué es Klean?
 
-En el mundo real, **Klean** no es solo un servicio de limpieza, es una Startup de **Facility Services**. Nos dedicamos a mantener espacios higiénicos, seguros y funcionales para que nuestros clientes recuperen su activo más valioso: su tiempo.
+En el contexto de la ingeniería de servicios, **Klean** es una Startup de **Facility Services**. Nos dedicamos a la optimización de mantenimiento de espacios para que nuestros clientes recuperen su activo más valioso: su tiempo.
 
 ### Nuestro Modelo de Negocio
-Nuestra plataforma web ataca dos mercados estratégicos:
+La plataforma web integra soluciones para dos segmentos de mercado:
 
 1.  **Residencial (B2C):** *Confianza y Tiempo.*
-    * Servicios para casas y departamentos (Limpieza profunda, recurrente, lavado de salas).
-    * Objetivo: Que el cliente no pierda su fin de semana limpiando.
+    * Servicios para casas y departamentos (Limpieza profunda, recurrente).
+    * Objetivo: Eliminar la carga operativa del usuario final.
 2.  **Corporativo (B2B):** *Imagen y Productividad.*
-    * Servicios para oficinas y locales (Vidrios de altura, pulido de pisos, insumos higiénicos).
-    * Objetivo: Una oficina impecable proyecta profesionalismo.
+    * Servicios para oficinas y edificios (Vidrios de altura, sanitización, insumos).
+    * Objetivo: Garantizar la continuidad operativa de las empresas mediante espacios funcionales.
 
-### 🚀 Enfoque "Startup" (Innovación)
-A diferencia de las empresas tradicionales, Klean opera bajo un modelo **On-Demand** (tipo Uber):
-* **Tecnología:** Gestión de citas en tiempo real desde la Web.
-* **Seguridad:** Personal de confianza con verificación de antecedentes (Safety First).
-* **Eco-Friendly:** Uso de productos biodegradables y maquinaria moderna (vapor/industrial).
-
----
-
-## 🛠️ Herramientas de Desarrollo Requeridas
-
-Para replicar el entorno de desarrollo de este proyecto, se requieren las siguientes herramientas:
-
-### Software Base
-* **[XAMPP](https://www.apachefriends.org/):** Servidor local (Apache + MySQL).
-* **[Visual Studio Code](https://code.visualstudio.com/):** Editor de código fuente.
-
-### Extensiones de VS Code Recomendadas
-Para mantener el estándar de código y visualización:
-1.  **Prettier - Code formatter:** Para mantener el estilo consistente.
-2.  **Live Server:** Para visualización en tiempo real (Frontend).
-3.  **vscode-icons:** Para mejor organización visual de archivos.
+### 🚀 Innovación y Tecnología
+Klean opera bajo un modelo **On-Demand** que moderniza el sector tradicional:
+* **Gestión Digital:** Solicitud y cotización de servicios en tiempo real vía Web.
+* **Seguridad:** Personal verificado (Background checks) y capacitado.
+* **Sostenibilidad:** Uso de productos biodegradables y maquinaria industrial de alta eficiencia.
 
 ---
 
-## ⚙️ Guía Técnica y Despliegue
+## 🛠️ Stack de Desarrollo y Herramientas
 
-Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local.
+El proyecto fue implementado utilizando las siguientes tecnologías y herramientas de entorno:
 
-### 1. Configuración del Entorno
-Asegúrate de que XAMPP esté corriendo (servicios Apache y MySQL activos).
+### Entorno de Desarrollo
+* **[XAMPP](https://www.apachefriends.org/):** Pila de servicios (Apache + MariaDB/MySQL + PHP).
+* **[Visual Studio Code](https://code.visualstudio.com/):** IDE principal.
 
-### 2. Base de Datos
-* Accede al administrador de PHP: `http://localhost/phpmyadmin`
-* Crea una base de datos llamada: `Eq3Klean`
-* Importa el archivo `.sql` incluido en la carpeta raíz.
+### Extensiones de VS Code (Calidad de Código)
+Para mantener estándares de ingeniería de software se utilizaron:
+1.  **Prettier - Code formatter:** Formateo automático para consistencia de estilo.
+2.  **Live Server:** Despliegue local en tiempo real para Frontend.
+3.  **vscode-icons:** Organización visual de la estructura de archivos.
 
-> **Nota de Respaldo:** El archivo SQL fue generado mediante la siguiente instrucción en consola (CMD como administrador):
+---
+
+## ⚙️ Despliegue e Instalación
+
+Sigue estos pasos para levantar la instancia local del proyecto.
+
+### 1. Configuración del Servidor
+Asegúrate de tener el servicio **Apache** y **MySQL** activos en el panel de control de XAMPP.
+
+### 2. Base de Datos (MySQL)
+* Accede a `http://localhost/phpmyadmin`
+* Crea la base de datos: `Eq3Klean`
+* Importa el script SQL (`Eq3Klean.sql`) ubicado en la raíz del repositorio.
+
+> **Comando de Respaldo (Referencia):**
+> El esquema fue generado mediante CLI para garantizar integridad:
 > ```bash
 > C:\xampp\mysql\bin\mysqldump -u root -p Eq3Klean > Eq3Klean.sql
 > ```
 
-### 3. Ejecución del Sitio
-Una vez configurado XAMPP y clonado el repositorio en la carpeta `htdocs`, accede a la siguiente URL:
+### 3. Ejecución
+Clona el repositorio en tu carpeta `htdocs` y accede a:
 
 👉 **[http://localhost/Eq3Klean/index.php](http://localhost/Eq3Klean/index.php)**
 
 ---
 
-## 📂 Estructura del Sitio Web
+## 📂 Arquitectura del Sitio
 
-El sitio cumple con los requisitos de evaluación mediante las siguientes secciones:
+El sistema cumple con los requerimientos de evaluación funcional y técnica:
 
-* **Inicio (index.php):** "Tu oficina impecable, sin que muevas un dedo". Presentación de la propuesta de valor.
-* **Servicios:** Tablas comparativas (Plan Básico vs. Premium) y listas detalladas de servicios B2B/B2C.
-* **Cotización (Formulario):** Captura de datos reales para el negocio (Tipo de inmueble, m², frecuencia).
-* **Backend:** Procesamiento de datos en PHP y conexión persistente a MySQL.
+* **Frontend:** HTML5 Semántico, CSS3 (Diseño Responsivo/Corporativo), JavaScript (DOM Manipulation).
+* **Backend:** PHP estructurado para manejo de lógica de negocio.
+* **Persistencia:** Base de Datos Relacional MySQL.
+* **Módulos:**
+    * **Inicio:** Propuesta de valor y CTA (Call to Action).
+    * **Servicios:** Tablas comparativas de planes (Básico/Premium).
+    * **Cotización:** Formulario con captura de variables de negocio (m², tipo de inmueble).
 
 ---
-© 2025 Klean Solutions. Proyecto Académico FES Aragón.
+© 2025 Klean Solutions. Facultad de Ingeniería, UNAM.
