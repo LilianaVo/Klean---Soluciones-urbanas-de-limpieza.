@@ -1,4 +1,4 @@
-# 🏢 Klean | Soluciones Urbanas de Limpieza
+# 🌀 Klean | Soluciones Urbanas de Limpieza
 
 ![Estado](https://img.shields.io/badge/Estado-Finalizado-success)
 ![Versión](https://img.shields.io/badge/Versión-1.0.0-0052CC)
