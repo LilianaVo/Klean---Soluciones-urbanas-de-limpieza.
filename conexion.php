@@ -2,7 +2,7 @@
 /**
  * ARCHIVO DE CONEXIÓN UNIVERSAL (XAMPP / AppServ / WAMP)
  * * Este script intenta conectarse automáticamente probando las credenciales
- * más comunes en entornos académicos y de desarrollo.
+ * más comunes 
  */
 
 $host = "localhost";
@@ -11,11 +11,11 @@ $usuario = "root";
 
 // LISTA DE CONTRASEÑAS A PROBAR (Prioridad Alta -> Baja)
 $posibles_passwords = [
-    "Klean2025*",    // 1. Tu contraseña (XAMPP Desarrollo)
-    "12345678",      // 2. Contraseña por defecto de AppServ (Muy probable que use esta el profe)
+    "Klean2025*",    // 1. contraseña (XAMPP Desarrollo)
+    "12345678",      
     "",              // 3. Contraseña vacía (XAMPP/WAMP por defecto)
-    "root",          // 4. MAMP / Docker
-    "admin"          // 5. Genérica
+    "root",          
+    "admin"          
 ];
 
 $conn = null;
@@ -43,7 +43,7 @@ foreach ($posibles_passwords as $password) {
 
 // VERIFICACIÓN FINAL Y REPORTE DE ERROR PARA EL PROFESOR
 if (!$conectado) {
-    // Diseño de error profesional y académico
+    // Diseño de error 
     echo "<div style='background-color: #fee2e2; color: #991b1b; padding: 25px; border: 1px solid #ef4444; font-family: Arial, sans-serif; max-width: 800px; margin: 30px auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);'>";
     echo "<h2 style='margin-top:0;'>⚠️ Atención: Error de Conexión a Base de Datos</h2>";
     echo "<p>El sistema de autodeteción probó 5 credenciales estándar (incluyendo AppServ default) y ninguna funcionó.</p>";
