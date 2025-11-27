@@ -338,7 +338,7 @@
             
             <div class="video-container" style="text-align: center;">
     <video width="100%" height="auto" controls>
-        <source src="/images/Klean_Video_Promocional_Servicios_de_Limpieza.mp4" type="video/mp4">
+        <source src="/images/Generación_de_Video_Promocional_Klean.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
     </video>
 </div>
