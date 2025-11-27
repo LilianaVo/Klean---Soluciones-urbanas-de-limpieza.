@@ -74,13 +74,13 @@ Asegúrate de tener el servicio **Apache** y **MySQL** activos en el panel de co
 
 ### 2. Base de Datos (MySQL)
 * Accede a `http://localhost/phpmyadmin`
-* Crea la base de datos: `Eq3Klean`
-* Importa el script SQL (`Eq3Klean.sql`) ubicado en la raíz del repositorio.
+* Crea la base de datos: `Eq3ServiciosLimpieza`
+* Importa el script SQL (`bd_klean.sql` o el archivo SQL ubicado en la raíz).
 
 > **Comando de Respaldo (Referencia):**
 > El esquema fue generado mediante CLI para garantizar integridad:
 > ```bash
-> C:\xampp\mysql\bin\mysqldump -u root -p Eq3Klean > Eq3Klean.sql
+> C:\xampp\mysql\bin\mysqldump -u root -p Eq3ServiciosLimpieza > bd_klean.sql
 > ```
 
 ### 3. Ejecución
