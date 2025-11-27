@@ -1,9 +1,10 @@
 <?php
 include 'conexion.php';
 
-// CONSULTA ACTUALIZADA: Apunta a la tabla 'solicitudes' y ordena por fecha descendente (lo nuevo arriba)
+// --- CORRECCIÓN IMPORTANTE ---
+// Usamos $conn (que viene de conexion.php) en lugar de $conexion
 $sql = "SELECT * FROM solicitudes ORDER BY id DESC";
-$resultado = mysqli_query($conexion, $sql);
+$resultado = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -102,7 +103,10 @@ $resultado = mysqli_query($conexion, $sql);
             <div class="card-metric">
                 <div class="icon-box" style="background:#e0f2fe; color:#0284c7;"><i class="fas fa-inbox"></i></div>
                 <div>
-                    <h3 style="font-size:1.5rem; font-weight:700;"><?php echo mysqli_num_rows($resultado); ?></h3>
+                    <!-- Agregamos validación por si $resultado es false -->
+                    <h3 style="font-size:1.5rem; font-weight:700;">
+                        <?php echo $resultado ? mysqli_num_rows($resultado) : 0; ?>
+                    </h3>
                     <p style="font-size:0.85rem; color:#64748b;">Solicitudes Totales</p>
                 </div>
             </div>
@@ -141,7 +145,7 @@ $resultado = mysqli_query($conexion, $sql);
                 </thead>
                 <tbody>
                     <?php 
-                    if ($resultado) {
+                    if ($resultado && mysqli_num_rows($resultado) > 0) {
                         while ($row = mysqli_fetch_array($resultado)) { 
                     ?>
                         <tr>
@@ -182,13 +186,14 @@ $resultado = mysqli_query($conexion, $sql);
                                     } 
                                 ?>
                             </td>
-                            <td><?php echo $row['fecha']; ?></td>
+                            <!-- Verificamos si existe fecha, si no pone la fecha actual -->
+                            <td><?php echo isset($row['fecha']) ? $row['fecha'] : date('Y-m-d'); ?></td>
                             <td><span class="status-dot"></span>Activo</td>
                         </tr>
                     <?php 
                         } 
                     } else {
-                        echo "<tr><td colspan='7' style='text-align:center; padding:20px;'>No se encontraron datos o la tabla no existe.</td></tr>";
+                        echo "<tr><td colspan='7' style='text-align:center; padding:20px;'>No se encontraron datos o hubo un error en la consulta.</td></tr>";
                     }
                     ?>
                 </tbody>
