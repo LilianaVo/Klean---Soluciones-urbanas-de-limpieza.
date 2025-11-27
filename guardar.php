@@ -1,19 +1,37 @@
 <?php
 include 'conexion.php';
 
-// 1. Recibimos los datos del formulario
-$nombre = $_POST['nombre_cliente']; 
-$email = $_POST['email'];
-$telefono = $_POST['telefono'];
-$tipo = $_POST['tipo_servicio'];
-$plan = $_POST['plan'];
+// 1. Recibimos los datos (Opcional: validamos que existan)
+$nombre = isset($_POST['nombre_cliente']) ? $_POST['nombre_cliente'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$telefono = isset($_POST['telefono']) ? $_POST['telefono'] : '';
+$tipo = isset($_POST['tipo_servicio']) ? $_POST['tipo_servicio'] : '';
+$plan = isset($_POST['plan']) ? $_POST['plan'] : '';
 
-// 2. Insertamos en la Base de Datos
-$sql = "INSERT INTO solicitudes (nombre, email, telefono, tipo_servicio, plan) VALUES ('$nombre', '$email', '$telefono', '$tipo', '$plan')";
+// 2. Insertamos en la Base de Datos de forma SEGURA (Prepared Statement)
+// Usamos signos de interrogación (?) como marcadores de posición
+$sql = "INSERT INTO solicitudes (nombre, email, telefono, tipo_servicio, plan) VALUES (?, ?, ?, ?, ?)";
 
-$guardado = mysqli_query($conexion, $sql);
+// Preparamos la sentencia
+$stmt = $conn->prepare($sql);
 
-
+if ($stmt) {
+    // "sssss" significa que vamos a enviar 5 Strings (cadenas de texto)
+    $stmt->bind_param("sssss", $nombre, $email, $telefono, $tipo, $plan);
+    
+    // Ejecutamos
+    if ($stmt->execute()) {
+        $guardado = true;
+    } else {
+        $guardado = false;
+        $error_msg = $stmt->error;
+    }
+    // Cerramos la sentencia
+    $stmt->close();
+} else {
+    $guardado = false;
+    $error_msg = $conn->error;
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -86,12 +104,13 @@ $guardado = mysqli_query($conexion, $sql);
                 <h1 class="subtitle">¡Solicitud Recibida!</h1>
                 
                 <p class="about__paragraph" style="color: #64748b; margin-bottom: 30px;">
-                    Gracias <strong><?php echo $nombre; ?></strong>.<br><br>
+                    <!-- USAMOS htmlspecialchars POR SEGURIDAD AL IMPRIMIR EN HTML -->
+                    Gracias <strong><?php echo htmlspecialchars($nombre); ?></strong>.<br><br>
                     Hemos enviado una confirmación a: <br>
-                    <strong style="color: #004e92;"><?php echo $email; ?></strong>
+                    <strong style="color: #004e92;"><?php echo htmlspecialchars($email); ?></strong>
                     <br><br>
-                    Registramos tu interés en el servicio <strong><?php echo $tipo; ?></strong> (Plan <?php echo $plan; ?>).
-                    Un asesor te contactará al <strong><?php echo $telefono; ?></strong>.
+                    Registramos tu interés en el servicio <strong><?php echo htmlspecialchars($tipo); ?></strong> (Plan <?php echo htmlspecialchars($plan); ?>).
+                    Un asesor te contactará al <strong><?php echo htmlspecialchars($telefono); ?></strong>.
                 </p>
                 
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
@@ -105,7 +124,7 @@ $guardado = mysqli_query($conexion, $sql);
                 <p style="color: #64748b;">No se pudo guardar la solicitud en la base de datos.</p>
                 
                 <p style="font-size: 0.8rem; color: #94a3b8; word-break: break-all;">
-                    Error técnico: <?php echo mysqli_error($conexion); ?>
+                    Error técnico: <?php echo isset($error_msg) ? htmlspecialchars($error_msg) : 'Error desconocido'; ?>
                 </p>
                 
                 <a href="index.php" class="cta">Intentar de nuevo</a>
@@ -119,6 +138,9 @@ $guardado = mysqli_query($conexion, $sql);
         </section>
     </footer>
     
-    <?php mysqli_close($conexion); ?>
+    <?php 
+    // Cerrar la conexión usando estilo orientado a objetos
+    $conn->close(); 
+    ?>
 </body>
 </html>
