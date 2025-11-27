@@ -13,7 +13,7 @@ $sql = "INSERT INTO solicitudes (nombre, email, telefono, tipo_servicio, plan) V
 
 $guardado = mysqli_query($conexion, $sql);
 
-// OJO: Aquí quité el mysqli_close para que no marque error abajo
+
 ?>
 <!DOCTYPE html>
 <html lang="es">

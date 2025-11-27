@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- ESTILOS CORPORATIVOS BLINDADOS 7.0 (FINAL) --- */
+        /* --- ESTILOS CORPORATIVOS  (FINAL) --- */
         
         :root {
             --primary: #004e92;      /* Azul Royal Profundo */
@@ -111,7 +111,6 @@
         .section-title .subtitle { color: var(--primary); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 10px; }
 
         /* --- CARDS (DIVISIONES) --- */
-        /* CUADRÍCULA ACTUALIZADA A 4 COLUMNAS Y ESTILOS MÁS COMPACTOS */
         .grid-4 { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
