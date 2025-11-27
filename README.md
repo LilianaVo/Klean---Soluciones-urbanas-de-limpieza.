@@ -99,8 +99,8 @@ El sistema cumple con los requerimientos de evaluación funcional y técnica:
 * **Persistencia:** Base de Datos Relacional MySQL.
 * **Módulos:**
     * **Inicio:** Propuesta de valor y CTA (Call to Action).
-    * **Servicios:** Tablas comparativas de planes (Básico/Premium).
-    * **Cotización:** Formulario con captura de variables de negocio (m², tipo de inmueble).
+    * **Servicios:** Tablas comparativas de planes (Básico/Estándar/Premium).
+    * **Cotización:** Formulario con captura de variables de negocio (tipo de inmueble).
 
 ---
 © 2025 Klean Solutions. Facultad de Ingeniería, UNAM.
