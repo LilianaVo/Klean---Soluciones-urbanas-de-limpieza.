@@ -336,9 +336,12 @@
                 <p style="color: #cbd5e0;">Recorrido por el sistema, procesos y herramientas que utilizamos.</p>
             </div>
             
-            <div class="video-container">
-                <iframe width="100%" height="450" src="https://www.youtube.com/embed/ysz5S6P_bsU?controls=1&mute=0" title="Demo Plataforma" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            <div class="video-container" style="text-align: center;">
+    <video width="100%" height="auto" controls>
+        <source src="images/Generación_de_Video_Promocional_Klean.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+</div>
         </div>
     </section>
 
