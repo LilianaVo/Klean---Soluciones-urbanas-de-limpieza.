@@ -1,0 +1,6 @@
+# Forzar que los archivos .php cuenten como lenguaje PHP
+*.php linguist-language=PHP
+
+# Ignorar archivos de base de datos y librerías en las estadísticas
+*.sql linguist-vendored
+vendor/* linguist-vendored
