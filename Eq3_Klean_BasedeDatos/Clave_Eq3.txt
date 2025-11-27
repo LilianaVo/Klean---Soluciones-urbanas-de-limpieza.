@@ -1,0 +1,5 @@
+Contraseña de la Base de Datos MySQL:
+
+Usuario: root
+Password: Klean2025*
+Base de Datos: Eq3Klean

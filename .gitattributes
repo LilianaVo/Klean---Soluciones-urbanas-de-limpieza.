@@ -1,0 +1,6 @@
+# Forzar PHP
+*.php linguist-language=PHP
+
+# Ignorar archivos de base de datos en las estadísticas
+*.sql linguist-vendored
+Eq3_Klean_BasedeDatos/* linguist-vendored
