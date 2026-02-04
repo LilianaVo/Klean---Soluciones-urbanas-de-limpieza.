@@ -1,106 +1,120 @@
-# 🧹 Klean | Soluciones Urbanas de Limpieza (Servicios de Limpieza)
+<div align="center">
 
-![UNAM](https://img.shields.io/badge/UNAM-Facultad_de_Ingeniería-gold)
-![Carrera](https://img.shields.io/badge/Ingeniería-Computación-blue)
-![Semestre](https://img.shields.io/badge/Semestre-2026--1-red)
+# Klean: Urban Cleaning Solutions
 
-> **Universidad Nacional Autónoma de México** > **Facultad de Ingeniería**
+### A Facility Services Startup platform for B2B and B2C market segments.
+
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Apache](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=apache&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+[View Demo] • [Report Bug] • [Request Feature]
+
+</div>
 
 ---
 
-## 🎓 Datos Académicos
+## Business Concept
 
-| Campo | Detalle |
+**Klean** is a **Facility Services Startup** modeled within the context of Service Engineering. We focus on optimizing space maintenance, allowing our clients to reclaim their most valuable asset: time.
+
+### Business Model
+The web platform integrates solutions for two key market segments:
+
+1.  **Residential (B2C):** *Trust & Time.*
+    * Services for houses and apartments (Deep cleaning, recurring maintenance).
+    * **Goal:** Eliminate the operational burden for the end user.
+2.  **Corporate (B2B):** *Image & Productivity.*
+    * Services for offices and buildings (High-rise glass cleaning, sanitization, supplies).
+    * **Goal:** Ensure business continuity through functional workspaces.
+
+### Innovation & Technology
+Klean operates on an **On-Demand** model that modernizes the traditional sector:
+* **Digital Management:** Real-time service requests and quoting via Web.
+* **Security:** Verified staff (Background checks) and professional training.
+* **Sustainability:** Use of biodegradable products and high-efficiency industrial machinery.
+
+---
+
+## Academic Context
+
+This project was developed for the **Electronic Business & Web Development** course at the **National Autonomous University of Mexico (UNAM)**.
+
+| **Course Information** | **Details** |
 | :--- | :--- |
-| **Institución** | UNAM - Facultad de Ingeniería |
-| **Carrera** | Ingeniería en Computación |
-| **Asignatura** | Negocios Electrónicos y Desarrollo Web |
-| **Grupo** | 02 |
-| **Profesor** | M.I. Salvador Perez Viramontes |
-| **Fecha de Entrega** | Noviembre 2025 |
-| **Ciclo Escolar** | 2026-1 |
-
-### 👥 Integrantes del Equipo (Eq3)
-* **Calzontzi Hernández Yaretzi**
-* **Jiménez Hernández Diana**
-* **Lee Obando Ileana Veronica**
+| **University** | Universidad Nacional Autónoma de México (UNAM) |
+| **Faculty** | **Faculty of Engineering** |
+| **Course** | E-business and Web Development |
+| **Professor** | M.I. Salvador Perez Viramontes |
+| **Semester** | 2026-1 |
+| **Group** | 02 |
 
 ---
 
-## 💡 Concepto del Negocio: ¿Qué es Klean?
+## Tech Stack & Tools
 
-En el contexto de la ingeniería de servicios, **Klean** es una Startup de **Facility Services**. Nos dedicamos a la optimización de mantenimiento de espacios para que nuestros clientes recuperen su activo más valioso: su tiempo.
+The project was implemented using the following technologies and environment tools:
 
-### Nuestro Modelo de Negocio
-La plataforma web integra soluciones para dos segmentos de mercado:
+### Development Environment
+* **[XAMPP](https://www.apachefriends.org/):** Service stack (Apache + MariaDB/MySQL + PHP).
+* **[Visual Studio Code](https://code.visualstudio.com/):** Main IDE.
 
-1.  **Residencial (B2C):** *Confianza y Tiempo.*
-    * Servicios para casas y departamentos (Limpieza profunda, recurrente).
-    * Objetivo: Eliminar la carga operativa del usuario final.
-2.  **Corporativo (B2B):** *Imagen y Productividad.*
-    * Servicios para oficinas y edificios (Vidrios de altura, sanitización, insumos).
-    * Objetivo: Garantizar la continuidad operativa de las empresas mediante espacios funcionales.
-
-### 🚀 Innovación y Tecnología
-Klean opera bajo un modelo **On-Demand** que moderniza el sector tradicional:
-* **Gestión Digital:** Solicitud y cotización de servicios en tiempo real vía Web.
-* **Seguridad:** Personal verificado (Background checks) y capacitado.
-* **Sostenibilidad:** Uso de productos biodegradables y maquinaria industrial de alta eficiencia.
+### Quality Assurance Tools
+To maintain software engineering standards, the following VS Code extensions were used:
+1.  **Prettier:** Automatic code formatting for style consistency.
+2.  **Live Server:** Real-time local deployment for Frontend.
+3.  **vscode-icons:** Visual file structure organization.
 
 ---
 
-## 🛠️ Stack de Desarrollo y Herramientas
+## Deployment & Installation
 
-El proyecto fue implementado utilizando las siguientes tecnologías y herramientas de entorno:
+Follow these steps to deploy the local instance of the project.
 
-### Entorno de Desarrollo
-* **[XAMPP](https://www.apachefriends.org/):** Pila de servicios (Apache + MariaDB/MySQL + PHP).
-* **[Visual Studio Code](https://code.visualstudio.com/):** IDE principal.
+### 1. Server Configuration
+Ensure that **Apache** and **MySQL** services are active in your XAMPP control panel.
 
-### Extensiones de VS Code (Calidad de Código)
-Para mantener estándares de ingeniería de software se utilizaron:
-1.  **Prettier - Code formatter:** Formateo automático para consistencia de estilo.
-2.  **Live Server:** Despliegue local en tiempo real para Frontend.
-3.  **vscode-icons:** Organización visual de la estructura de archivos.
+### 2. Database Setup (MySQL)
+* Access `http://localhost/phpmyadmin`
+* Create a database named: `Eq3ServiciosLimpieza`
+* Import the SQL script (`bd_klean.sql` located in the root directory).
 
----
-
-## ⚙️ Despliegue e Instalación
-
-Sigue estos pasos para levantar la instancia local del proyecto.
-
-### 1. Configuración del Servidor
-Asegúrate de tener el servicio **Apache** y **MySQL** activos en el panel de control de XAMPP.
-
-### 2. Base de Datos (MySQL)
-* Accede a `http://localhost/phpmyadmin`
-* Crea la base de datos: `Eq3ServiciosLimpieza`
-* Importa el script SQL (`bd_klean.sql` o el archivo SQL ubicado en la raíz).
-
-> **Comando de Respaldo (Referencia):**
-> El esquema fue generado mediante CLI para garantizar integridad:
+> **Backup Command (Reference):**
+> The schema was generated via CLI to ensure integrity:
 > ```bash
 > C:\xampp\mysql\bin\mysqldump -u root -p Eq3ServiciosLimpieza > bd_klean.sql
 > ```
 
-### 3. Ejecución
-Clona el repositorio en tu carpeta `htdocs` y accede a:
+### 3. Execution
+Clone the repository into your `htdocs` folder and navigate to:
 
-👉 **[http://localhost/Eq3Klean/index.php](http://localhost/Eq3Klean/index.php)**
+👉 **`http://localhost/Eq3Klean/index.php`**
+
+---
+
+## Site Architecture
+
+The system meets functional and technical evaluation requirements:
+
+* **Frontend:** Semantic HTML5, CSS3 (Responsive/Corporate Design), JavaScript (DOM Manipulation).
+* **Backend:** Structured PHP for business logic handling.
+* **Persistence:** MySQL Relational Database.
+* **Modules:**
+    * **Home:** Value proposition and CTA (Call to Action).
+    * **Services:** Comparative tables for plans (Basic/Standard/Premium).
+    * **Quoting:** Dynamic form capturing business variables (property type).
 
 ---
 
-## 📂 Arquitectura del Sitio
+## Contributors (Team Eq3)
 
-El sistema cumple con los requerimientos de evaluación funcional y técnica:
-
-* **Frontend:** HTML5 Semántico, CSS3 (Diseño Responsivo/Corporativo), JavaScript (DOM Manipulation).
-* **Backend:** PHP estructurado para manejo de lógica de negocio.
-* **Persistencia:** Base de Datos Relacional MySQL.
-* **Módulos:**
-    * **Inicio:** Propuesta de valor y CTA (Call to Action).
-    * **Servicios:** Tablas comparativas de planes (Básico/Estándar/Premium).
-    * **Cotización:** Formulario con captura de variables de negocio (tipo de inmueble).
+* **Calzontzi Hernández Yaretzi**
+* **Jiménez Hernández Diana**
+* **Lee Obando Ileana Verónica**
 
 ---
-© 2025 Klean Solutions. Facultad de Ingeniería, UNAM.
+
+## 📄 License
+
+© 2025 Klean Solutions. Distributed under the MIT License.
